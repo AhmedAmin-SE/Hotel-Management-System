@@ -65,7 +65,7 @@ public class DBTest {
      * Test of UpdateReservation method, of class DB.
      */
     @Test
-    public void UpdateReservation() {
+    public void testUpdateReservation() {
         Room room = new Room("1290", "Ground", "40 square meters", "1/20/2021", "5% discount", "Trible");
         db.ReserveAccomodation(new Booked_Accomodation("Room", "Ahmed", "1/24/2021", "1/28/2021", room.getID(), room.getLocation(), room.getDescription(), room.getFirst_available_date(), room.getOffer_description()));
         Booked_Accomodation BookedAccomodation = db.getBookedAccomodationByID(room.getID());
